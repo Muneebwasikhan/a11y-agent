@@ -1,0 +1,8 @@
+{
+  "name": "Missing image alt text",
+  "seeded": ["image-alt"],
+  "interactive": [
+    { "track": "browse-all", "keys": ["enter"] }
+  ],
+  "notes": "Gallery with three informative product images and one decorative divider, none carrying alt attributes. Correct fixes write descriptive alt for the prints and mark the divider decorative with empty alt."
+}

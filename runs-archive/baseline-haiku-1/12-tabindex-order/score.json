@@ -1,0 +1,53 @@
+{
+  "caseId": "12-tabindex-order",
+  "name": "Positive tabindex scrambles focus order",
+  "gates": {
+    "axe": false,
+    "keyboard": false,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 5,
+  "axeAfter": 5,
+  "incompleteAfter": 0,
+  "axeRules": [
+    {
+      "id": "tabindex",
+      "impact": "serious",
+      "nodes": 5,
+      "help": "Elements should not have tabindex greater than zero",
+      "targets": [
+        "#first-name",
+        "#last-name",
+        "#email",
+        "#party-size",
+        "button"
+      ]
+    }
+  ],
+  "keyboard": {
+    "pass": false,
+    "tabOrder": [
+      "track:last-name",
+      "track:email",
+      "track:first-name",
+      "track:book",
+      "track:party-size"
+    ],
+    "unreachable": [],
+    "orderPass": false,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "wallMs": 8371,
+  "outputError": true,
+  "failReason": "api_error: 500 {\"type\":\"error\",\"error\":{\"type\":\"api_error\",\"message\":\"Internal server error\"},\"request_id\":\"req_011CeZHCUCZX7X4gX3Unie6J\"}"
+}

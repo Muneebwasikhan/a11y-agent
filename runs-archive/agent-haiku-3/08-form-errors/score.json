@@ -1,0 +1,41 @@
+{
+  "caseId": "08-form-errors",
+  "name": "Errors announced only visually",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 3,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:card-name",
+      "track:card-number",
+      "track:card-expiry",
+      "track:pay-now"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0.0012,
+  "costUsd": 0.0531,
+  "turns": 15,
+  "wallMs": 55708,
+  "cacheReadTokens": 99716,
+  "permissionDenials": 1,
+  "attempts": 1
+}

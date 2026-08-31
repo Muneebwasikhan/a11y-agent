@@ -1,0 +1,54 @@
+{
+  "caseId": "05-heading-order",
+  "name": "Broken heading hierarchy",
+  "gates": {
+    "axe": false,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 2,
+  "axeAfter": 2,
+  "incompleteAfter": 0,
+  "axeRules": [
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "nodes": 1,
+      "help": "Heading levels should only increase by one",
+      "targets": [
+        "h5:nth-child(4)"
+      ]
+    },
+    {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "nodes": 1,
+      "help": "Page should contain a level-one heading",
+      "targets": [
+        "html"
+      ]
+    }
+  ],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:subscribe"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.0065,
+  "wallMs": 5846,
+  "outputError": false
+}

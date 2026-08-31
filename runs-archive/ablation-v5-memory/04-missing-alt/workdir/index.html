@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Prints</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #fff; color: #23282e }
+  header { padding: 18px 32px; border-bottom: 1px solid #e7e9ec; font-weight: 700 }
+  main { max-width: 860px; margin: 36px auto; padding: 0 24px }
+  h1 { font-size: 26px; margin: 0 0 6px }
+  p.sub { color: #59626c; margin: 0 0 28px }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px }
+  figure { margin: 0 }
+  img.photo { width: 100%; height: auto; border-radius: 8px; display: block }
+  figcaption { font-size: 14px; margin-top: 8px; color: #3a424b }
+  .divider { display: block; margin: 32px auto 20px; width: 120px }
+  .foot { text-align: center }
+  a.browse { color: #2456c4; font-weight: 600 }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<header>Studio Prints</header>
+<main>
+  <h1>New this week</h1>
+  <p class="sub">Three risograph prints from the spring collection, each numbered and signed.</p>
+  <div class="grid">
+    <figure>
+      <img class="photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='220'><rect width='320' height='220' fill='%234a7b62'/><circle cx='160' cy='110' r='58' fill='%23f2e9d8'/></svg>" alt="Harbor Morning, edition of 40">
+      <figcaption>Harbor Morning, edition of 40</figcaption>
+    </figure>
+    <figure>
+      <img class="photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='220'><rect width='320' height='220' fill='%23b6543e'/><rect x='60' y='50' width='200' height='120' fill='%23f2e9d8'/></svg>" alt="Kiln Study, edition of 25">
+      <figcaption>Kiln Study, edition of 25</figcaption>
+    </figure>
+    <figure>
+      <img class="photo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='220'><rect width='320' height='220' fill='%23315b7d'/><path d='M0 170 L110 70 L200 150 L320 60 L320 220 L0 220 Z' fill='%23f2e9d8'/></svg>" alt="North Ridge, edition of 40">
+      <figcaption>North Ridge, edition of 40</figcaption>
+    </figure>
+  </div>
+  <img class="divider" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='12'><circle cx='10' cy='6' r='3' fill='%23c9ccd1'/><circle cx='60' cy='6' r='3' fill='%23c9ccd1'/><circle cx='110' cy='6' r='3' fill='%23c9ccd1'/></svg>" alt="">
+  <p class="foot"><a class="browse" href="#top" data-track="browse-all">Browse the full catalog</a></p>
+</main>
+</body>
+</html>

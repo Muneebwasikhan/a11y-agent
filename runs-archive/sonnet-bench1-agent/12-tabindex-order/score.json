@@ -1,0 +1,41 @@
+{
+  "caseId": "12-tabindex-order",
+  "name": "Positive tabindex scrambles focus order",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 5,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:first-name",
+      "track:last-name",
+      "track:email",
+      "track:party-size",
+      "track:book"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.0966,
+  "turns": 8,
+  "wallMs": 60110,
+  "cacheReadTokens": 85392,
+  "permissionDenials": 1
+}

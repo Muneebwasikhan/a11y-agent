@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout, Bramble Coffee</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #faf9f7; color: #24211d }
+  header { background: #2d2620; color: #fff; padding: 16px 32px; font-weight: 700 }
+  main { max-width: 480px; margin: 40px auto; background: #fff; border: 1px solid #e5e1da; border-radius: 10px; padding: 30px }
+  h1 { font-size: 22px; margin: 0 0 18px }
+  label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px }
+  input { width: 100%; padding: 10px 12px; margin-bottom: 4px; border: 1px solid #c8c2b8; border-radius: 6px; font-size: 15px }
+  input:focus { outline: 2px solid #6b4d2e; outline-offset: 2px }
+  .field { margin-bottom: 16px }
+  .error { font-size: 13px; color: #e2685f; min-height: 16px }
+  .summary { color: #e2685f; font-size: 14px; margin-bottom: 18px }
+  button { width: 100%; padding: 12px; background: #6b4d2e; color: #fff; border: 0; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 6px }
+  button:focus { outline: 2px solid #6b4d2e; outline-offset: 2px }
+  .secure { font-size: 12px; color: #6f675c; margin-top: 14px; text-align: center }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<header>Bramble Coffee</header>
+<main>
+  <h1>Payment details</h1>
+  <div class="summary" role="alert" aria-live="assertive" id="error-summary">Please fix the 2 problems below to continue.</div>
+  <form id="pay-form" novalidate>
+    <div class="field">
+      <label for="card-name">Name on card</label>
+      <input type="text" id="card-name" data-track="card-name" value="M. Khan" aria-invalid="false" aria-describedby="card-name-error">
+      <div class="error" id="card-name-error" role="status"></div>
+    </div>
+    <div class="field">
+      <label for="card-number">Card number</label>
+      <input type="text" id="card-number" data-track="card-number" value="4242 4242" aria-invalid="true" aria-describedby="card-number-error">
+      <div class="error" id="card-number-error" role="status">This card number is too short.</div>
+    </div>
+    <div class="field">
+      <label for="card-expiry">Expiry date</label>
+      <input type="text" id="card-expiry" data-track="card-expiry" value="14/2024" aria-invalid="true" aria-describedby="card-expiry-error">
+      <div class="error" id="card-expiry-error" role="status">Enter a valid month and year, like 04/27.</div>
+    </div>
+    <button type="submit" data-track="pay-now">Pay $18.50</button>
+  </form>
+  <p class="secure">Payments are processed securely. Nothing is charged until you confirm.</p>
+</main>
+<script>
+  document.getElementById('pay-form').addEventListener('submit', function (e) {
+    e.preventDefault()
+  })
+</script>
+</body>
+</html>

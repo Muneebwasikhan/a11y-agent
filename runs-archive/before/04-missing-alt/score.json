@@ -1,0 +1,45 @@
+{
+  "caseId": "04-missing-alt",
+  "name": "Missing image alt text",
+  "gates": {
+    "axe": false,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 4,
+  "axeAfter": 4,
+  "incompleteAfter": 0,
+  "axeRules": [
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "nodes": 4,
+      "help": "Images must have alternative text",
+      "targets": [
+        "figure:nth-child(1) > .photo",
+        "figure:nth-child(2) > .photo",
+        "figure:nth-child(3) > .photo",
+        ".divider"
+      ]
+    }
+  ],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:browse-all"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0
+}

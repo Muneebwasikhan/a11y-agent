@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #fbf8f3; color: #2a2118 }
+  main { max-width: 560px; margin: 64px auto; padding: 0 24px; text-align: center }
+  .badge { display: inline-block; padding: 5px 12px; background: #eadfce; border-radius: 999px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #6d5a41; margin-bottom: 18px }
+  h1 { font-size: 30px; margin: 0 0 12px; line-height: 1.25 }
+  p { color: #5a4d3d; line-height: 1.65; margin: 0 0 26px }
+  button { padding: 12px 22px; background: #7a5c34; color: #fff; border: 0; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer }
+  button:focus-visible { outline: 3px solid #2a2118; outline-offset: 2px }
+  .when { margin-top: 26px; font-size: 14px; color: #6d5a41 }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target instanceof Element) {
+      var hit = e.target.closest('[data-track]')
+      var name = hit ? hit.getAttribute('data-track') : null
+      if (name && hit.tagName === 'BUTTON') window.__activated.push(name)
+    }
+  })
+</script>
+</head>
+<body>
+<main>
+  <span class="badge">Save the date</span>
+  <h1>The Millhouse reopens on the first of May</h1>
+  <p>After a winter of careful restoration, the water wheel turns again. Join us for the opening weekend with milling demonstrations, fresh bread from the stone ovens, and tours of the new grain loft.</p>
+  <button type="button" data-track="rsvp">Reserve a spot</button>
+  <p class="when">Opening weekend runs May 1 to May 3, entry is free.</p>
+</main>
+</body>
+</html>

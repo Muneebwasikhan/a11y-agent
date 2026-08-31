@@ -1,0 +1,8 @@
+{
+  "kind": "baseline",
+  "model": "claude-sonnet-5",
+  "createdAt": "2026-08-30T15:56:30.931Z",
+  "node": "v24.0.1",
+  "gitCommit": "d4ec20dc09175beb55869ee26a4c57cbc657e1ed",
+  "note": "one direct structured-output call per case, no tools, no iteration"
+}

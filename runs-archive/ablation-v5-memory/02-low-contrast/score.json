@@ -1,0 +1,39 @@
+{
+  "caseId": "02-low-contrast",
+  "name": "Low contrast text",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 9,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:cta",
+      "track:learn-more"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0.0163,
+  "costUsd": 0.0944,
+  "turns": 26,
+  "wallMs": 93933,
+  "cacheReadTokens": 265131,
+  "permissionDenials": 1,
+  "attempts": 1
+}

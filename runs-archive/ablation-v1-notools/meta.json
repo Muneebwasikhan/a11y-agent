@@ -1,0 +1,12 @@
+{
+  "kind": "agent",
+  "variant": "v1-notools",
+  "model": "claude-haiku-4-5",
+  "mcpTools": [],
+  "skill": false,
+  "memory": false,
+  "createdAt": "2026-08-31T09:14:23.232Z",
+  "node": "v24.0.1",
+  "gitCommit": "bff6f5358b63987dbaff6107032ff1e616c8ef74",
+  "sandbox": "acceptEdits inside the case workdir, read denials on harness, fixtures, runners and archive, no Bash or network tools, no permission bypass"
+}

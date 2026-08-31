@@ -1,0 +1,12 @@
+{
+  "name": "Positive tabindex scrambles focus order",
+  "seeded": ["tabindex", "focus-order"],
+  "interactive": [
+    { "track": "first-name", "keys": [] },
+    { "track": "last-name", "keys": [] },
+    { "track": "email", "keys": [] },
+    { "track": "party-size", "keys": [] },
+    { "track": "book", "keys": ["enter", "space"] }
+  ],
+  "notes": "Positive tabindex values send focus hopping around the form, last name before first name and the submit button before party size. The interactive list above is the expected visual order. Correct fixes remove the positive tabindex values and let DOM order carry focus."
+}

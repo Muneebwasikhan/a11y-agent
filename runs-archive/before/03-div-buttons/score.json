@@ -1,0 +1,59 @@
+{
+  "caseId": "03-div-buttons",
+  "name": "Divs acting as buttons",
+  "gates": {
+    "axe": true,
+    "keyboard": false,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 0,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": false,
+    "tabOrder": [],
+    "unreachable": [
+      "save",
+      "share",
+      "discard"
+    ],
+    "orderPass": true,
+    "activationFailures": [
+      {
+        "track": "save",
+        "key": "enter"
+      },
+      {
+        "track": "save",
+        "key": "space"
+      },
+      {
+        "track": "share",
+        "key": "enter"
+      },
+      {
+        "track": "share",
+        "key": "space"
+      },
+      {
+        "track": "discard",
+        "key": "enter"
+      },
+      {
+        "track": "discard",
+        "key": "space"
+      }
+    ],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "baseline",
+  "model": "claude-haiku-4-5",
+  "createdAt": "2026-08-30T16:50:59.350Z",
+  "node": "v24.0.1",
+  "gitCommit": "47c08c2de24dedd00dc34129b4f89e5714406dca",
+  "note": "one direct structured-output call per case, no tools, no iteration"
+}

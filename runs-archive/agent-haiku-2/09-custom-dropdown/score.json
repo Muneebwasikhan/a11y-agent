@@ -1,0 +1,45 @@
+{
+  "caseId": "09-custom-dropdown",
+  "name": "Keyboard-unreachable custom dropdown",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 0,
+  "axeAfter": 0,
+  "incompleteAfter": 1,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:dd-toggle",
+      "track:result-1",
+      "track:result-2",
+      "track:result-3"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": [],
+    "probe": {
+      "name": "dropdownKeyboard",
+      "pass": true,
+      "detail": "open, arrow navigation, select and close all work from the keyboard"
+    }
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.1246,
+  "turns": 20,
+  "wallMs": 142951,
+  "cacheReadTokens": 302031,
+  "permissionDenials": 1
+}

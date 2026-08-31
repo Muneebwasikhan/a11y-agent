@@ -1,0 +1,38 @@
+{
+  "name": "a11y-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "setup": "playwright install chromium",
+    "typecheck": "tsc --noEmit",
+    "eval:before": "tsx harness/score.ts --target before",
+    "baseline": "tsx baseline/run.ts",
+    "agent": "tsx agent/run.ts",
+    "score": "tsx harness/score.ts --target",
+    "report": "tsx harness/report.ts",
+    "demo": "tsx agent/run.ts --case 09 && tsx harness/report.ts",
+    "eval:all": "npm run eval:before && npm run baseline && npm run agent && npm run report",
+    "verify": "tsx harness/score.ts --target archive && tsx harness/report.ts --archive",
+    "promote": "tsx harness/promote.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.251",
+    "@anthropic-ai/sdk": "0.122.0",
+    "@axe-core/playwright": "4.13.0",
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "pixelmatch": "7.2.0",
+    "playwright": "1.62.1",
+    "pngjs": "7.0.0",
+    "zod": "4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "4.23.12",
+    "typescript": "5.9.3"
+  }
+}

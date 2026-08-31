@@ -1,0 +1,38 @@
+{
+  "caseId": "05-heading-order",
+  "name": "Broken heading hierarchy",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 2,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:subscribe"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1.063
+  },
+  "pixelDiffRatio": 0.0356,
+  "costUsd": 0.0552,
+  "turns": 15,
+  "wallMs": 69654,
+  "cacheReadTokens": 112386,
+  "permissionDenials": 3,
+  "attempts": 1
+}

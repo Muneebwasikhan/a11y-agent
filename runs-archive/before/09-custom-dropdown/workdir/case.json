@@ -1,0 +1,10 @@
+{
+  "name": "Keyboard-unreachable custom dropdown",
+  "seeded": ["not-focusable", "no-listbox-semantics", "no-arrow-navigation", "mouse-only-selection"],
+  "interactive": [
+    { "track": "dd-toggle", "keys": ["enter"] },
+    { "track": "result-1", "keys": ["enter"] }
+  ],
+  "probe": "dropdownKeyboard",
+  "notes": "The designated challenging case. A styled div dropdown that works perfectly with a mouse and is invisible to axe, yet cannot be reached or operated from the keyboard. The design team requires the custom-styled listbox to stay, replacing it with a native select is not acceptable. Correct fixes add focusability, combobox and listbox semantics, arrow key navigation, Enter selection that triggers the same click behavior as the mouse path, and Escape to close."
+}

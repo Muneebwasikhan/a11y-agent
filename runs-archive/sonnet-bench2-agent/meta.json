@@ -1,0 +1,12 @@
+{
+  "kind": "agent",
+  "variant": "v1-notools",
+  "model": "claude-sonnet-5",
+  "mcpTools": [],
+  "skill": false,
+  "memory": false,
+  "createdAt": "2026-08-30T16:11:14.238Z",
+  "node": "v24.0.1",
+  "gitCommit": "d4ec20dc09175beb55869ee26a4c57cbc657e1ed",
+  "sandbox": "acceptEdits inside the case workdir, read denials on harness, fixtures, runners and archive, no Bash or network tools, no permission bypass"
+}

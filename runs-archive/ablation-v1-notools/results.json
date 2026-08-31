@@ -1,0 +1,547 @@
+{
+  "runName": "agent-v1-notools-2026-08-31T09-14-23",
+  "createdAt": "2026-08-31T09:25:50.132Z",
+  "cases": [
+    {
+      "caseId": "01-missing-labels",
+      "name": "Missing form labels",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 4,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "id:fullname",
+          "id:email",
+          "id:password",
+          "id:source",
+          "track:submit"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0398,
+      "turns": 8,
+      "wallMs": 41650,
+      "cacheReadTokens": 40952,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "02-low-contrast",
+      "name": "Low contrast text",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 9,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:cta",
+          "track:learn-more"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.0164,
+      "costUsd": 0.0725,
+      "turns": 10,
+      "wallMs": 86322,
+      "cacheReadTokens": 80402,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "03-div-buttons",
+      "name": "Divs acting as buttons",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:save",
+          "track:share",
+          "track:discard"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0286,
+      "turns": 8,
+      "wallMs": 37761,
+      "cacheReadTokens": 44833,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "04-missing-alt",
+      "name": "Missing image alt text",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 4,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:browse-all"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0419,
+      "turns": 10,
+      "wallMs": 52251,
+      "cacheReadTokens": 62655,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "05-heading-order",
+      "name": "Broken heading hierarchy",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 2,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:subscribe"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0421,
+      "turns": 11,
+      "wallMs": 54338,
+      "cacheReadTokens": 68770,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "06-focus-indicators",
+      "name": "Suppressed focus indicators",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:nav-guides",
+          "track:nav-reference",
+          "tag:input",
+          "track:search-go",
+          "track:whats-new"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0301,
+      "turns": 7,
+      "wallMs": 41208,
+      "cacheReadTokens": 37501,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "07-modal",
+      "name": "Modal without focus management",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:help-link",
+          "track:open-modal"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": [],
+        "probe": {
+          "name": "modalTrap",
+          "pass": true,
+          "detail": "trap, escape and focus return all work"
+        }
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0546,
+      "turns": 10,
+      "wallMs": 61969,
+      "cacheReadTokens": 71277,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "08-form-errors",
+      "name": "Errors announced only visually",
+      "gates": {
+        "axe": false,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 3,
+      "axeAfter": 3,
+      "incompleteAfter": 0,
+      "axeRules": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 3,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".summary",
+            "#card-number-error",
+            "#card-expiry-error"
+          ]
+        }
+      ],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:card-name",
+          "track:card-number",
+          "track:card-expiry",
+          "track:pay-now"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0344,
+      "turns": 8,
+      "wallMs": 46570,
+      "cacheReadTokens": 44919,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "09-custom-dropdown",
+      "name": "Keyboard-unreachable custom dropdown",
+      "gates": {
+        "axe": true,
+        "keyboard": false,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 1,
+      "axeRules": [],
+      "keyboard": {
+        "pass": false,
+        "tabOrder": [
+          "track:dd-toggle",
+          "track:result-1",
+          "track:result-2",
+          "track:result-3"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [
+          {
+            "track": "dd-toggle",
+            "key": "enter"
+          }
+        ],
+        "focusIndicatorFailures": [],
+        "probe": {
+          "name": "dropdownKeyboard",
+          "pass": false,
+          "detail": "arrow keys plus Enter did not select an option"
+        }
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0893,
+      "turns": 20,
+      "wallMs": 88008,
+      "cacheReadTokens": 219217,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "10-landmarks",
+      "name": "No landmark structure",
+      "gates": {
+        "axe": false,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 5,
+      "axeAfter": 5,
+      "incompleteAfter": 0,
+      "axeRules": [
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "nodes": 1,
+          "help": "Document should have one main landmark",
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "nodes": 4,
+          "help": "All page content should be contained by landmarks",
+          "targets": [
+            ".brand",
+            ".hero",
+            "#events",
+            ".bottom"
+          ]
+        }
+      ],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:nav-visit",
+          "track:nav-events"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0278,
+      "turns": 7,
+      "wallMs": 38784,
+      "cacheReadTokens": 37007,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "11-lang-title",
+      "name": "Missing document language and title",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 2,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:rsvp"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0422,
+      "turns": 9,
+      "wallMs": 57230,
+      "cacheReadTokens": 53329,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "12-tabindex-order",
+      "name": "Positive tabindex scrambles focus order",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 5,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:first-name",
+          "track:last-name",
+          "track:email",
+          "track:party-size",
+          "track:book"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0475,
+      "turns": 11,
+      "wallMs": 55549,
+      "cacheReadTokens": 73564,
+      "permissionDenials": 1,
+      "attempts": 1
+    }
+  ],
+  "passRate": "9/12",
+  "meta": {
+    "kind": "agent",
+    "variant": "v1-notools",
+    "model": "claude-haiku-4-5",
+    "mcpTools": [],
+    "skill": false,
+    "memory": false,
+    "createdAt": "2026-08-31T09:14:23.232Z",
+    "node": "v24.0.1",
+    "gitCommit": "bff6f5358b63987dbaff6107032ff1e616c8ef74",
+    "sandbox": "acceptEdits inside the case workdir, read denials on harness, fixtures, runners and archive, no Bash or network tools, no permission bypass"
+  }
+}

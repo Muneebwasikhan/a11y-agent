@@ -1,0 +1,9 @@
+{
+  "name": "No landmark structure",
+  "seeded": ["region", "landmark-one-main"],
+  "interactive": [
+    { "track": "nav-visit", "keys": ["enter"] },
+    { "track": "nav-events", "keys": ["enter"] }
+  ],
+  "notes": "Whole page built from anonymous divs, nothing sits in a landmark. Correct fixes introduce header, nav, main and footer elements without altering the rendered layout."
+}

@@ -1,0 +1,564 @@
+{
+  "runName": "baseline-2026-08-30T16-54-17",
+  "createdAt": "2026-08-30T16:55:47.687Z",
+  "cases": [
+    {
+      "caseId": "01-missing-labels",
+      "name": "Missing form labels",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 4,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "id:fullname",
+          "id:email",
+          "id:password",
+          "id:source",
+          "track:submit"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.0261,
+      "costUsd": 0.0065,
+      "wallMs": 5785,
+      "outputError": false
+    },
+    {
+      "caseId": "02-low-contrast",
+      "name": "Low contrast text",
+      "gates": {
+        "axe": false,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 9,
+      "axeAfter": 9,
+      "incompleteAfter": 0,
+      "axeRules": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 9,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            ".sub",
+            ".plan",
+            "small",
+            "li:nth-child(1)",
+            "li:nth-child(2)"
+          ]
+        }
+      ],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:cta",
+          "track:learn-more"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.0018,
+      "costUsd": 0.0072,
+      "wallMs": 6752,
+      "outputError": false
+    },
+    {
+      "caseId": "03-div-buttons",
+      "name": "Divs acting as buttons",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:save",
+          "track:share",
+          "track:discard"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.0015,
+      "costUsd": 0.0068,
+      "wallMs": 5609,
+      "outputError": false
+    },
+    {
+      "caseId": "04-missing-alt",
+      "name": "Missing image alt text",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 4,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:browse-all"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0077,
+      "wallMs": 5532,
+      "outputError": false
+    },
+    {
+      "caseId": "05-heading-order",
+      "name": "Broken heading hierarchy",
+      "gates": {
+        "axe": false,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 2,
+      "axeAfter": 2,
+      "incompleteAfter": 0,
+      "axeRules": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "nodes": 1,
+          "help": "Heading levels should only increase by one",
+          "targets": [
+            "h5:nth-child(4)"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "nodes": 1,
+          "help": "Page should contain a level-one heading",
+          "targets": [
+            "html"
+          ]
+        }
+      ],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:subscribe"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0065,
+      "wallMs": 9636,
+      "outputError": false,
+      "failReason": "api_error: 500 {\"type\":\"error\",\"error\":{\"type\":\"api_error\",\"message\":\"Internal server error\"},\"request_id\":\"req_011CeZHNiwMcoHKy7pT4jERQ\"}"
+    },
+    {
+      "caseId": "06-focus-indicators",
+      "name": "Suppressed focus indicators",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:nav-guides",
+          "track:nav-reference",
+          "tag:input",
+          "track:search-go",
+          "track:whats-new"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0077,
+      "wallMs": 7218,
+      "outputError": false
+    },
+    {
+      "caseId": "07-modal",
+      "name": "Modal without focus management",
+      "gates": {
+        "axe": true,
+        "keyboard": false,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": false,
+        "tabOrder": [
+          "track:help-link",
+          "track:open-modal"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [
+          {
+            "track": "open-modal",
+            "key": "enter"
+          },
+          {
+            "track": "open-modal",
+            "key": "space"
+          }
+        ],
+        "focusIndicatorFailures": [],
+        "probe": {
+          "name": "modalTrap",
+          "pass": false,
+          "detail": "focus escapes the open modal while tabbing, Escape does not close the modal"
+        }
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0118,
+      "wallMs": 9568,
+      "outputError": false
+    },
+    {
+      "caseId": "08-form-errors",
+      "name": "Errors announced only visually",
+      "gates": {
+        "axe": false,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 3,
+      "axeAfter": 3,
+      "incompleteAfter": 0,
+      "axeRules": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": 3,
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "targets": [
+            "#error-summary",
+            "#card-number-error",
+            "#card-expiry-error"
+          ]
+        }
+      ],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:card-name",
+          "track:card-number",
+          "track:card-expiry",
+          "track:pay-now"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0075,
+      "wallMs": 5871,
+      "outputError": false
+    },
+    {
+      "caseId": "09-custom-dropdown",
+      "name": "Keyboard-unreachable custom dropdown",
+      "gates": {
+        "axe": true,
+        "keyboard": false,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": false,
+        "tabOrder": [
+          "track:dd-toggle",
+          "track:result-1",
+          "track:result-2",
+          "track:result-3"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": [],
+        "probe": {
+          "name": "dropdownKeyboard",
+          "pass": false,
+          "detail": "arrow keys plus Enter did not select an option"
+        }
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.012,
+      "costUsd": 0.0134,
+      "wallMs": 11122,
+      "outputError": false
+    },
+    {
+      "caseId": "10-landmarks",
+      "name": "No landmark structure",
+      "gates": {
+        "axe": false,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 5,
+      "axeAfter": 5,
+      "incompleteAfter": 0,
+      "axeRules": [
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "nodes": 1,
+          "help": "Document should have one main landmark",
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "nodes": 4,
+          "help": "All page content should be contained by landmarks",
+          "targets": [
+            "span",
+            ".hero",
+            "#events",
+            ".bottom"
+          ]
+        }
+      ],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:nav-visit",
+          "track:nav-events"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0065,
+      "wallMs": 5989,
+      "outputError": false
+    },
+    {
+      "caseId": "11-lang-title",
+      "name": "Missing document language and title",
+      "gates": {
+        "axe": false,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": false,
+      "axeBefore": 2,
+      "axeAfter": 2,
+      "incompleteAfter": 0,
+      "axeRules": [
+        {
+          "id": "document-title",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "Documents must have <title> element to aid in navigation",
+          "targets": [
+            "html"
+          ]
+        },
+        {
+          "id": "html-has-lang",
+          "impact": "serious",
+          "nodes": 1,
+          "help": "<html> element must have a lang attribute",
+          "targets": [
+            "html"
+          ]
+        }
+      ],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:rsvp"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.005,
+      "wallMs": 4300,
+      "outputError": false
+    },
+    {
+      "caseId": "12-tabindex-order",
+      "name": "Positive tabindex scrambles focus order",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 5,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:first-name",
+          "track:last-name",
+          "track:email",
+          "track:party-size",
+          "track:book"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0069,
+      "wallMs": 5515,
+      "outputError": false
+    }
+  ],
+  "passRate": "5/12",
+  "meta": {
+    "kind": "baseline",
+    "model": "claude-haiku-4-5",
+    "createdAt": "2026-08-30T16:54:17.440Z",
+    "node": "v24.0.1",
+    "gitCommit": "47c08c2de24dedd00dc34129b4f89e5714406dca",
+    "note": "one direct structured-output call per case, no tools, no iteration"
+  }
+}

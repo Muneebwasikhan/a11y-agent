@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas Search Results</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #f5f6f8; color: #20242b }
+  header { background: #fff; border-bottom: 1px solid #e4e6ea; padding: 16px 32px; font-weight: 700 }
+  main { max-width: 680px; margin: 36px auto; padding: 0 24px }
+  .bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px }
+  h1 { font-size: 20px; margin: 0 }
+  .dd { position: relative; font-size: 14px }
+  .dd-toggle { display: flex; align-items: center; gap: 8px; padding: 9px 14px; background: #fff; border: 1px solid #c9ced6; border-radius: 7px; cursor: pointer; user-select: none; font-family: inherit; font-size: inherit }
+  .dd-toggle:focus { outline: 2px solid #2456c4; outline-offset: 2px }
+  .dd-toggle .caret { font-size: 10px; color: #6a7280 }
+  .dd-list { position: absolute; right: 0; top: calc(100% + 6px); width: 200px; background: #fff; border: 1px solid #c9ced6; border-radius: 8px; box-shadow: 0 8px 20px rgba(24, 30, 40, 0.12); display: none; z-index: 5 }
+  .dd-list.open { display: block }
+  .dd-option { padding: 10px 14px; cursor: pointer }
+  .dd-option:hover { background: #eef1f5 }
+  .dd-option:focus { outline: 2px solid #2456c4; outline-offset: -2px }
+  .result { background: #fff; border: 1px solid #e4e6ea; border-radius: 8px; padding: 18px 20px; margin-bottom: 12px }
+  .result h2 { font-size: 16px; margin: 0 0 6px }
+  .result h2 a { color: #2456c4; text-decoration: none }
+  .result h2 a:focus { outline: 2px solid #2456c4; outline-offset: 2px }
+  .result p { margin: 0; font-size: 14px; color: #4d5663; line-height: 1.55 }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<header>Atlas</header>
+<main>
+  <div class="bar">
+    <h1>34 results for "harbor"</h1>
+    <div class="dd">
+      <button class="dd-toggle" data-track="dd-toggle" id="sort-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="sort-list">
+        <span id="sort-label">Sort: Relevance</span>
+        <span class="caret">v</span>
+      </button>
+      <div class="dd-list" data-dd-list id="sort-list" role="listbox">
+        <div class="dd-option" data-track="dd-option-1" data-value="Relevance" role="option" tabindex="-1">Relevance</div>
+        <div class="dd-option" data-track="dd-option-2" data-value="Newest first" role="option" tabindex="-1">Newest first</div>
+        <div class="dd-option" data-track="dd-option-3" data-value="Most cited" role="option" tabindex="-1">Most cited</div>
+      </div>
+    </div>
+  </div>
+  <div class="result">
+    <h2><a href="#r1" data-track="result-1">Harbor Morning: tidal patterns of the north inlet</a></h2>
+    <p>Field measurements across three seasons show the inlet flushing cycle is closer to eleven days than the fourteen previously modeled.</p>
+  </div>
+  <div class="result">
+    <h2><a href="#r2" data-track="result-2">Dredging records of the outer harbor, 1954 to 2019</a></h2>
+    <p>A digitized archive of depth soundings and dredge volumes, cross-referenced with storm events and shipping tonnage.</p>
+  </div>
+  <div class="result">
+    <h2><a href="#r3" data-track="result-3">Breakwater vegetation survey</a></h2>
+    <p>Species counts along the south breakwater, with photographs, sampling notes and a comparison against the 2011 baseline.</p>
+  </div>
+</main>
+<script>
+  var toggle = document.getElementById('sort-toggle')
+  var list = document.getElementById('sort-list')
+  var label = document.getElementById('sort-label')
+  var options = document.querySelectorAll('.dd-option')
+
+  function openDropdown() {
+    list.classList.add('open')
+    toggle.setAttribute('aria-expanded', 'true')
+    if (options.length > 0) {
+      options[0].setAttribute('tabindex', '0')
+      options[0].focus()
+    }
+  }
+
+  function closeDropdown() {
+    list.classList.remove('open')
+    toggle.setAttribute('aria-expanded', 'false')
+    options.forEach(function (opt) {
+      opt.setAttribute('tabindex', '-1')
+    })
+    toggle.focus()
+  }
+
+  toggle.addEventListener('click', function () {
+    if (list.classList.contains('open')) {
+      closeDropdown()
+    } else {
+      openDropdown()
+    }
+  })
+
+  toggle.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      if (list.classList.contains('open')) {
+        closeDropdown()
+      } else {
+        openDropdown()
+      }
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      if (!list.classList.contains('open')) {
+        openDropdown()
+      } else {
+        if (options.length > 0) {
+          options[0].focus()
+        }
+      }
+    }
+  })
+
+  Array.prototype.forEach.call(options, function (option, index) {
+    option.addEventListener('click', function () {
+      label.textContent = 'Sort: ' + option.getAttribute('data-value')
+      closeDropdown()
+    })
+
+    option.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault()
+        label.textContent = 'Sort: ' + option.getAttribute('data-value')
+        closeDropdown()
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        if (index < options.length - 1) {
+          options[index + 1].setAttribute('tabindex', '0')
+          options[index + 1].focus()
+          option.setAttribute('tabindex', '-1')
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        if (index > 0) {
+          options[index - 1].setAttribute('tabindex', '0')
+          options[index - 1].focus()
+          option.setAttribute('tabindex', '-1')
+        } else {
+          toggle.focus()
+        }
+      } else if (e.key === 'Escape') {
+        e.preventDefault()
+        closeDropdown()
+      }
+    })
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orchard City Library</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #fff; color: #23282d }
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 16px 32px; border-bottom: 1px solid #e5e8ea }
+  .brand { font-weight: 700 }
+  .links a { color: #34613f; text-decoration: none; font-size: 14px; margin-left: 18px; padding: 4px 8px; border-radius: 3px; outline-offset: 2px }
+  .links a:focus-visible { outline: 2px solid #34613f }
+  .links a:hover { text-decoration: underline }
+  .hero { max-width: 720px; margin: 44px auto 0; padding: 0 24px }
+  h1 { font-size: 28px; margin: 0 0 10px }
+  .hero p { color: #4b5560; line-height: 1.65; margin: 0 0 22px }
+  .hours { max-width: 720px; margin: 28px auto; padding: 20px 24px; background: #f3f7f2; border-radius: 10px }
+  .hours h2 { font-size: 17px; margin: 0 0 10px }
+  .hours p { margin: 0; font-size: 14px; color: #45503c; line-height: 1.7 }
+  .bottom { max-width: 720px; margin: 36px auto 40px; padding: 18px 24px 0; border-top: 1px solid #e5e8ea; font-size: 13px; color: #67707a }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<div class="top">
+  <span class="brand">Orchard City Library</span>
+  <nav class="links" aria-label="Main navigation">
+    <a href="#visit" data-track="nav-visit">Visit</a>
+    <a href="#events" data-track="nav-events">Events</a>
+  </nav>
+</div>
+<main>
+  <div class="hero">
+    <h1 id="visit">A quiet place that is anything but idle</h1>
+    <p>Borrow tools as well as books, book a recording room, or join the Wednesday repair cafe. A library card is free for every resident and takes five minutes at the front desk.</p>
+  </div>
+  <div class="hours" id="events">
+    <h2>This week</h2>
+    <p>Monday to Friday, 9am to 8pm. Saturday, 10am to 5pm. Story hour on Saturday at 10:30am and the seed exchange runs all week in the atrium.</p>
+  </div>
+</main>
+<footer class="bottom">14 Orchard Row. Front desk: front@orchardlibrary.example</footer>
+</body>
+</html>

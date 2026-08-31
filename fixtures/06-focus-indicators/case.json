@@ -1,0 +1,11 @@
+{
+  "name": "Suppressed focus indicators",
+  "seeded": ["focus-visible"],
+  "interactive": [
+    { "track": "nav-guides", "keys": ["enter"] },
+    { "track": "nav-reference", "keys": ["enter"] },
+    { "track": "search-go", "keys": ["enter", "space"] },
+    { "track": "whats-new", "keys": ["enter", "space"] }
+  ],
+  "notes": "A global outline none rule erases every focus indicator. Axe cannot see this at all, the harness catches it by comparing focused and unfocused computed styles. Correct fixes add a visible focus style instead of just deleting the rule blindly."
+}

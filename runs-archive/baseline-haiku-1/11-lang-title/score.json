@@ -1,0 +1,54 @@
+{
+  "caseId": "11-lang-title",
+  "name": "Missing document language and title",
+  "gates": {
+    "axe": false,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 2,
+  "axeAfter": 2,
+  "incompleteAfter": 0,
+  "axeRules": [
+    {
+      "id": "document-title",
+      "impact": "serious",
+      "nodes": 1,
+      "help": "Documents must have <title> element to aid in navigation",
+      "targets": [
+        "html"
+      ]
+    },
+    {
+      "id": "html-has-lang",
+      "impact": "serious",
+      "nodes": 1,
+      "help": "<html> element must have a lang attribute",
+      "targets": [
+        "html"
+      ]
+    }
+  ],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:rsvp"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.0052,
+  "wallMs": 4346,
+  "outputError": false
+}

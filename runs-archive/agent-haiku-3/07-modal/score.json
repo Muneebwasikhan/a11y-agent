@@ -1,0 +1,41 @@
+{
+  "caseId": "07-modal",
+  "name": "Modal without focus management",
+  "gates": {
+    "axe": true,
+    "keyboard": false,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 0,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": false,
+    "tabOrder": [
+      "track:help-link",
+      "track:open-modal"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": [],
+    "probe": {
+      "name": "modalTrap",
+      "pass": false,
+      "detail": "focus escapes the open modal while tabbing"
+    }
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "failReason": "timeout",
+  "wallMs": 1795883,
+  "attempts": 2
+}

@@ -1,0 +1,57 @@
+{
+  "caseId": "01-missing-labels",
+  "name": "Missing form labels",
+  "gates": {
+    "axe": false,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 4,
+  "axeAfter": 4,
+  "incompleteAfter": 0,
+  "axeRules": [
+    {
+      "id": "label",
+      "impact": "critical",
+      "nodes": 3,
+      "help": "Form elements must have labels",
+      "targets": [
+        "input[type=\"text\"]",
+        "input[type=\"email\"]",
+        "input[type=\"password\"]"
+      ]
+    },
+    {
+      "id": "select-name",
+      "impact": "critical",
+      "nodes": 1,
+      "help": "Select element must have an accessible name",
+      "targets": [
+        "select"
+      ]
+    }
+  ],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "tag:input",
+      "tag:input",
+      "tag:input",
+      "tag:select",
+      "track:submit"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Divs acting as buttons",
+  "seeded": ["keyboard-unreachable", "no-button-semantics"],
+  "interactive": [
+    { "track": "save", "keys": ["enter", "space"] },
+    { "track": "share", "keys": ["enter", "space"] },
+    { "track": "discard", "keys": ["enter", "space"] }
+  ],
+  "notes": "Three click-handled divs styled as buttons. Axe barely reacts to this, the keyboard gate is what fails. Correct fixes convert to real buttons or add role, tabindex and key handling while keeping the data-track attributes."
+}

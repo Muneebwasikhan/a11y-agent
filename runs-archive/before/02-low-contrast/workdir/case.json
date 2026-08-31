@@ -1,0 +1,9 @@
+{
+  "name": "Low contrast text",
+  "seeded": ["color-contrast"],
+  "interactive": [
+    { "track": "cta", "keys": ["enter", "space"] },
+    { "track": "learn-more", "keys": ["enter"] }
+  ],
+  "notes": "Pricing card where body copy, list items, the link and the button label all sit below 4.5 to 1 on solid backgrounds. Correct fixes darken colors while keeping the visual hierarchy, the layout gate allows color changes."
+}

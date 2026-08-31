@@ -1,0 +1,1 @@
+{"type":"baseline_single_call","model":"claude-haiku-4-5","attempts":2,"outputError":false,"failReason":"api_error: 500 {\"type\":\"error\",\"error\":{\"type\":\"api_error\",\"message\":\"Internal server error\"},\"request_id\":\"req_011CeZHGwfR5fcoqzZMVE6jt\"}"}

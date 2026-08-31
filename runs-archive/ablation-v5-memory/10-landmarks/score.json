@@ -1,0 +1,39 @@
+{
+  "caseId": "10-landmarks",
+  "name": "No landmark structure",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 5,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:nav-visit",
+      "track:nav-events"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.0605,
+  "turns": 15,
+  "wallMs": 57799,
+  "cacheReadTokens": 104478,
+  "permissionDenials": 1,
+  "attempts": 1
+}

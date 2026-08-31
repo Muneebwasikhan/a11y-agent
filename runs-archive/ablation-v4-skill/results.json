@@ -1,0 +1,512 @@
+{
+  "runName": "agent-v4-skill-2026-08-31T09-38-08",
+  "createdAt": "2026-08-31T09:52:44.057Z",
+  "cases": [
+    {
+      "caseId": "01-missing-labels",
+      "name": "Missing form labels",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 4,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "id:fullname",
+          "id:email",
+          "id:password",
+          "id:source",
+          "track:submit"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.0261,
+      "costUsd": 0.0504,
+      "turns": 11,
+      "wallMs": 47194,
+      "cacheReadTokens": 79753,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "02-low-contrast",
+      "name": "Low contrast text",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 9,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:cta",
+          "track:learn-more"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.0165,
+      "costUsd": 0.0793,
+      "turns": 19,
+      "wallMs": 90419,
+      "cacheReadTokens": 200257,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "03-div-buttons",
+      "name": "Divs acting as buttons",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:save",
+          "track:share",
+          "track:discard"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0403,
+      "turns": 13,
+      "wallMs": 44911,
+      "cacheReadTokens": 69283,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "04-missing-alt",
+      "name": "Missing image alt text",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 4,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:browse-all"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0569,
+      "turns": 15,
+      "wallMs": 57814,
+      "cacheReadTokens": 137867,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "05-heading-order",
+      "name": "Broken heading hierarchy",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 2,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:subscribe"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0541,
+      "turns": 17,
+      "wallMs": 62660,
+      "cacheReadTokens": 138026,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "06-focus-indicators",
+      "name": "Suppressed focus indicators",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:nav-guides",
+          "track:nav-reference",
+          "tag:input",
+          "track:search-go",
+          "track:whats-new"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0423,
+      "turns": 12,
+      "wallMs": 44738,
+      "cacheReadTokens": 100099,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "07-modal",
+      "name": "Modal without focus management",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:help-link",
+          "track:open-modal"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": [],
+        "probe": {
+          "name": "modalTrap",
+          "pass": true,
+          "detail": "trap, escape and focus return all work"
+        }
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.1021,
+      "turns": 20,
+      "wallMs": 109274,
+      "cacheReadTokens": 197103,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "08-form-errors",
+      "name": "Errors announced only visually",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 3,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:card-name",
+          "track:card-number",
+          "track:card-expiry",
+          "track:pay-now"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0.0008,
+      "costUsd": 0.0649,
+      "turns": 15,
+      "wallMs": 69385,
+      "cacheReadTokens": 142943,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "09-custom-dropdown",
+      "name": "Keyboard-unreachable custom dropdown",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 0,
+      "axeAfter": 0,
+      "incompleteAfter": 1,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:dd-toggle",
+          "track:result-1",
+          "track:result-2",
+          "track:result-3"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": [],
+        "probe": {
+          "name": "dropdownKeyboard",
+          "pass": true,
+          "detail": "open, arrow navigation, select and close all work from the keyboard"
+        }
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.14,
+      "turns": 21,
+      "wallMs": 168562,
+      "cacheReadTokens": 197124,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "10-landmarks",
+      "name": "No landmark structure",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 5,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:nav-visit",
+          "track:nav-events"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.049,
+      "turns": 12,
+      "wallMs": 55498,
+      "cacheReadTokens": 70665,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "11-lang-title",
+      "name": "Missing document language and title",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 2,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:rsvp"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0336,
+      "turns": 12,
+      "wallMs": 35900,
+      "cacheReadTokens": 73534,
+      "permissionDenials": 1,
+      "attempts": 1
+    },
+    {
+      "caseId": "12-tabindex-order",
+      "name": "Positive tabindex scrambles focus order",
+      "gates": {
+        "axe": true,
+        "keyboard": true,
+        "layout": true
+      },
+      "pass": true,
+      "axeBefore": 5,
+      "axeAfter": 0,
+      "incompleteAfter": 0,
+      "axeRules": [],
+      "keyboard": {
+        "pass": true,
+        "tabOrder": [
+          "track:first-name",
+          "track:last-name",
+          "track:email",
+          "track:party-size",
+          "track:book"
+        ],
+        "unreachable": [],
+        "orderPass": true,
+        "activationFailures": [],
+        "focusIndicatorFailures": []
+      },
+      "layout": {
+        "pass": true,
+        "missing": [],
+        "shrunken": [],
+        "overflowX": false,
+        "heightRatio": 1
+      },
+      "pixelDiffRatio": 0,
+      "costUsd": 0.0587,
+      "turns": 15,
+      "wallMs": 62911,
+      "cacheReadTokens": 140538,
+      "permissionDenials": 1,
+      "attempts": 1
+    }
+  ],
+  "passRate": "12/12",
+  "meta": {
+    "kind": "agent",
+    "variant": "v4-skill",
+    "model": "claude-haiku-4-5",
+    "mcpTools": [
+      "audit_page",
+      "check_keyboard",
+      "preview_page"
+    ],
+    "skill": true,
+    "memory": false,
+    "createdAt": "2026-08-31T09:38:08.960Z",
+    "node": "v24.0.1",
+    "gitCommit": "c68ea5c93ff7d64d4c21aaa90fa6801ae041cf85",
+    "sandbox": "acceptEdits inside the case workdir, read denials on harness, fixtures, runners and archive, no Bash or network tools, no permission bypass"
+  }
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen Docs</title>
+<style>
+  * { box-sizing: border-box }
+  *:focus { outline: 2px solid #2456c4; outline-offset: 2px }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #fff; color: #22272e }
+  header { display: flex; align-items: center; gap: 24px; padding: 14px 32px; border-bottom: 1px solid #e6e8eb }
+  .logo { font-weight: 700 }
+  nav a { color: #3b434c; text-decoration: none; font-size: 14px; margin-right: 18px }
+  nav a:hover { text-decoration: underline }
+  nav a:focus { text-decoration: underline }
+  .search { margin-left: auto; display: flex; gap: 8px }
+  .search input { padding: 8px 12px; border: 1px solid #c8cdd3; border-radius: 6px; font-size: 14px; width: 220px }
+  .search input:focus { border-color: #2456c4; }
+  .search button { padding: 8px 14px; background: #22272e; color: #fff; border: 0; border-radius: 6px; font-size: 14px; cursor: pointer }
+  .search button:hover { background: #0e1117; }
+  .search button:focus { background: #0e1117; }
+  main { max-width: 640px; margin: 44px auto; padding: 0 24px; line-height: 1.65 }
+  h1 { font-size: 26px; margin: 0 0 12px }
+  p { color: #46505b; margin: 0 0 16px }
+  .banner { margin-top: 28px; padding: 18px 20px; background: #f2f6ff; border: 1px solid #d6e2fb; border-radius: 8px }
+  .banner button { padding: 10px 16px; background: #2456c4; color: #fff; border: 0; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer }
+  .banner button:hover { background: #1a47a0; }
+  .banner button:focus { background: #1a47a0; }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+      var name = hit ? hit.getAttribute('data-track') : null
+      if (name && (e.target.tagName === 'BUTTON' || e.target.tagName === 'A')) {
+        window.__activated.push(name)
+      }
+    }
+  })
+</script>
+</head>
+<body>
+<header>
+  <span class="logo">Lumen</span>
+  <nav>
+    <a href="#guides" data-track="nav-guides">Guides</a>
+    <a href="#reference" data-track="nav-reference">Reference</a>
+  </nav>
+  <div class="search">
+    <input type="search" aria-label="Search the docs" placeholder="Search the docs">
+    <button type="button" data-track="search-go">Search</button>
+  </div>
+</header>
+<main>
+  <h1 id="guides">Getting started</h1>
+  <p>Lumen ships as a single binary. Install it, point it at a folder of markdown, and it serves a documentation site with search built in.</p>
+  <p id="reference">The reference section covers configuration keys, theming variables, and the plugin interface for custom renderers.</p>
+  <div class="banner">
+    <p style="margin: 0 0 12px">New in 2.4: offline search indexes and keyboard shortcuts.</p>
+    <button type="button" data-track="whats-new">See what changed</button>
+  </div>
+</main>
+</body>
+</html>

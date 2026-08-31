@@ -1,0 +1,8 @@
+{
+  "name": "Broken heading hierarchy",
+  "seeded": ["page-has-heading-one", "heading-order"],
+  "interactive": [
+    { "track": "subscribe", "keys": ["enter", "space"] }
+  ],
+  "notes": "Article whose title is an h3 and whose sections jump to h5 and h6, with no h1 anywhere. Correct fixes restructure heading levels while keeping the rendered sizes through CSS."
+}

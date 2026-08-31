@@ -1,0 +1,11 @@
+{
+  "name": "Errors announced only visually",
+  "seeded": ["color-contrast", "no-aria-describedby", "no-aria-invalid", "no-live-region"],
+  "interactive": [
+    { "track": "card-name", "keys": [] },
+    { "track": "card-number", "keys": [] },
+    { "track": "card-expiry", "keys": [] },
+    { "track": "pay-now", "keys": ["enter", "space"] }
+  ],
+  "notes": "Server-rendered validation state where the error color fails contrast and errors are connected to nothing. Correct fixes darken the error color, link each message with aria-describedby, set aria-invalid, and make the summary a live region."
+}

@@ -1,0 +1,42 @@
+{
+  "caseId": "01-missing-labels",
+  "name": "Missing form labels",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 4,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "id:fullname",
+      "id:email",
+      "id:password",
+      "id:source",
+      "track:submit"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0.0261,
+  "costUsd": 0.0504,
+  "turns": 11,
+  "wallMs": 47194,
+  "cacheReadTokens": 79753,
+  "permissionDenials": 1,
+  "attempts": 1
+}

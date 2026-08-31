@@ -1,0 +1,39 @@
+{
+  "caseId": "06-focus-indicators",
+  "name": "Suppressed focus indicators",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 0,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:nav-guides",
+      "track:nav-reference",
+      "tag:input",
+      "track:search-go",
+      "track:whats-new"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.0409,
+  "wallMs": 38857,
+  "outputError": false
+}

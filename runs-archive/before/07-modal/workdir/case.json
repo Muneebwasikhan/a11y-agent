@@ -1,0 +1,10 @@
+{
+  "name": "Modal without focus management",
+  "seeded": ["no-focus-trap", "no-escape", "no-inert-background", "no-focus-return"],
+  "interactive": [
+    { "track": "help-link", "keys": ["enter"] },
+    { "track": "open-modal", "keys": ["enter", "space"] }
+  ],
+  "probe": "modalTrap",
+  "notes": "Dialog opens but focus stays in the page behind it, Escape does nothing, and closing never returns focus to the opener. Axe sees almost none of this on the initial view, the modalTrap probe is the measure. Correct fixes trap Tab inside the dialog, close on Escape, restore focus to the opener, and mark the background inert or aria-hidden while open."
+}

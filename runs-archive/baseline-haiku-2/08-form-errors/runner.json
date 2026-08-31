@@ -1,0 +1,6 @@
+{
+  "costUsd": 0.0073,
+  "wallMs": 10591,
+  "outputError": false,
+  "failReason": "api_error: 500 {\"type\":\"error\",\"error\":{\"type\":\"api_error\",\"message\":\"Internal server error\"},\"request_id\":\"req_011CeZHGwfR5fcoqzZMVE6jt\"}"
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join Fieldnote</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #f6f7f9; color: #1d232b }
+  .top { background: #1d232b; color: #fff; padding: 18px 32px; font-weight: 700 }
+  main { max-width: 460px; margin: 48px auto; background: #fff; border: 1px solid #dde2e8; border-radius: 10px; padding: 32px }
+  h1 { font-size: 24px; margin: 0 0 8px }
+  p.lead { color: #55606d; margin: 0 0 24px; line-height: 1.5 }
+  .field-label { font-size: 14px; font-weight: 600; margin: 0 0 6px; color: #2a323c }
+  input, select { width: 100%; padding: 10px 12px; margin: 0 0 16px; border: 1px solid #c3ccd6; border-radius: 6px; font-size: 15px }
+  input:focus, select:focus { outline: 2px solid #2456c4; outline-offset: 2px }
+  button { width: 100%; padding: 12px; background: #2456c4; color: #fff; border: 0; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer }
+  button:focus { outline: 2px solid #1d3aa8; outline-offset: 2px }
+  .fine { font-size: 12px; color: #55606d; margin-top: 14px; line-height: 1.5 }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<header class="top">Fieldnote</header>
+<main id="signup">
+  <h1>Create your account</h1>
+  <p class="lead">Track observations from the field and sync them when you are back online.</p>
+  <form id="signup-form">
+    <label for="fullname" class="field-label">Full name</label>
+    <input id="fullname" type="text">
+    <label for="email" class="field-label">Email address</label>
+    <input id="email" type="email">
+    <label for="password" class="field-label">Password</label>
+    <input id="password" type="password">
+    <label for="source" class="field-label">How did you hear about us?</label>
+    <select id="source">
+      <option value="">Choose one</option>
+      <option value="friend">A friend</option>
+      <option value="search">Search</option>
+      <option value="conference">A conference</option>
+    </select>
+    <button type="submit" data-track="submit">Create account</button>
+  </form>
+  <p class="fine">By creating an account you agree to the community guidelines. You can delete your data at any time from settings.</p>
+</main>
+<script>
+  document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault()
+  })
+</script>
+</body>
+</html>

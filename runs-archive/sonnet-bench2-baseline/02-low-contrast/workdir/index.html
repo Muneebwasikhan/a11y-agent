@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relay Pricing</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #ffffff; color: #24292f }
+  header { padding: 20px 32px; border-bottom: 1px solid #e8eaee; font-weight: 700 }
+  main { max-width: 720px; margin: 40px auto; padding: 0 24px }
+  h1 { font-size: 28px; margin: 0 0 6px }
+  p.sub { color: #57606a; margin: 0 0 32px; font-size: 15px; line-height: 1.6 }
+  .card { border: 1px solid #e8eaee; border-radius: 12px; padding: 28px; max-width: 380px }
+  .plan { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #57606a }
+  .price { font-size: 34px; font-weight: 700; margin: 10px 0 }
+  .price small { font-size: 14px; font-weight: 400; color: #57606a }
+  ul { padding-left: 18px; margin: 0 0 24px; color: #57606a; font-size: 14px; line-height: 1.9 }
+  a.more { color: #3b5bdb; font-size: 14px; text-decoration: underline }
+  button { width: 100%; padding: 12px; background: #3b5bdb; color: #ffffff; border: 0; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; margin-bottom: 14px }
+  button:hover { background: #32509f }
+  .note { font-size: 12px; color: #57606a; margin-top: 20px }
+
+  a.more:focus-visible,
+  button:focus-visible {
+    outline: 3px solid #1d2b53;
+    outline-offset: 2px;
+  }
+  a.more:focus,
+  button:focus {
+    outline: 3px solid #1d2b53;
+    outline-offset: 2px;
+  }
+  /* keep the offset from clipping against the rounded card edge */
+  .card button:focus-visible,
+  .card button:focus {
+    outline-offset: 3px;
+  }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<header>Relay</header>
+<main>
+  <h1>Simple pricing</h1>
+  <p class="sub">One plan, every feature, cancel whenever you like. No usage tiers and no per-seat surprises at the end of the month.</p>
+  <div class="card" role="group" aria-labelledby="plan-name">
+    <div class="plan" id="plan-name">Team</div>
+    <div class="price"><span aria-hidden="true">$24</span> <small>$24 per member, per month</small></div>
+    <ul>
+      <li>Unlimited shared inboxes</li>
+      <li>Automations and scheduled sends</li>
+      <li>Priority support within one business day</li>
+    </ul>
+    <button type="button" data-track="cta">Start free trial</button>
+    <a class="more" href="#details" data-track="learn-more">See what is included</a>
+  </div>
+  <p class="note" id="details" tabindex="-1">Prices exclude VAT. Annual billing saves two months.</p>
+</main>
+</body>
+</html>

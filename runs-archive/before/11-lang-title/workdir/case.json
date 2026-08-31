@@ -1,0 +1,8 @@
+{
+  "name": "Missing document language and title",
+  "seeded": ["html-has-lang", "document-title"],
+  "interactive": [
+    { "track": "rsvp", "keys": ["enter", "space"] }
+  ],
+  "notes": "Announcement page shipped without an html lang attribute or a document title. Correct fixes add lang and a descriptive title element."
+}

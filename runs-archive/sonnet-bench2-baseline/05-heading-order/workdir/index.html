@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trail Notes: Issue 18</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: Georgia, 'Times New Roman', serif; background: #fbfaf7; color: #262523 }
+  header { font-family: system-ui, sans-serif; padding: 18px 32px; border-bottom: 1px solid #e6e3da; font-weight: 700 }
+  main { max-width: 640px; margin: 44px auto; padding: 0 24px; line-height: 1.7 }
+  h1.title { font-size: 30px; margin: 0 0 4px; line-height: 1.2; font-weight: 400 }
+  .byline { font-family: system-ui, sans-serif; font-size: 13px; color: #6d6a63; margin-bottom: 28px }
+  h2 { font-size: 19px; margin: 30px 0 8px }
+  h3 { font-size: 16px; margin: 24px 0 6px }
+  p { margin: 0 0 16px }
+  .cta { font-family: system-ui, sans-serif; margin-top: 36px; padding: 20px; background: #efece4; border-radius: 8px }
+  .cta button { padding: 10px 18px; background: #40573c; color: #fff; border: 0; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer }
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid #1a4fd6;
+    outline-offset: 2px;
+  }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<header>Trail Notes</header>
+<main>
+  <h1 class="title">Reading the weather before it reads you</h1>
+  <p class="byline">Issue 18, by the Trail Notes editors</p>
+  <p>Every experienced hiker has a story about a bluebird morning that turned. The lesson is rarely that the forecast was wrong, it is that the signs on the hill were ignored.</p>
+  <h2>What lenticular clouds are telling you</h2>
+  <p>Those smooth lens-shaped caps over the summit mean strong winds aloft. They look calm and they are anything but, plan for gusts on exposed ridgelines.</p>
+  <h3>The two-hour rule</h3>
+  <p>If the cap thickens or drops within two hours of first spotting it, shorten the route. Weather that builds fast tends to arrive faster.</p>
+  <h2>Wind shifts at treeline</h2>
+  <p>A steady southwest breeze that swings north is the classic cold-front tell. Layers on, snacks out, and start thinking about the descent options you scouted at breakfast.</p>
+  <div class="cta">
+    <p style="margin: 0 0 12px">Get the next issue in your inbox every other Tuesday.</p>
+    <button type="button" data-track="subscribe">Subscribe free</button>
+  </div>
+</main>
+</body>
+</html>

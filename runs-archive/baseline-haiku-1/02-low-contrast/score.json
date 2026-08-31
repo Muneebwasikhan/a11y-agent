@@ -1,0 +1,50 @@
+{
+  "caseId": "02-low-contrast",
+  "name": "Low contrast text",
+  "gates": {
+    "axe": false,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 9,
+  "axeAfter": 9,
+  "incompleteAfter": 0,
+  "axeRules": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 9,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "targets": [
+        ".sub",
+        ".plan",
+        "small",
+        "li:nth-child(1)",
+        "li:nth-child(2)"
+      ]
+    }
+  ],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:cta",
+      "track:learn-more"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.0066,
+  "wallMs": 6661,
+  "outputError": false
+}

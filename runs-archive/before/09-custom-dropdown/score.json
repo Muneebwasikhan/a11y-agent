@@ -1,0 +1,46 @@
+{
+  "caseId": "09-custom-dropdown",
+  "name": "Keyboard-unreachable custom dropdown",
+  "gates": {
+    "axe": true,
+    "keyboard": false,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 0,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": false,
+    "tabOrder": [
+      "track:result-1",
+      "track:result-2",
+      "track:result-3"
+    ],
+    "unreachable": [
+      "dd-toggle"
+    ],
+    "orderPass": true,
+    "activationFailures": [
+      {
+        "track": "dd-toggle",
+        "key": "enter"
+      }
+    ],
+    "focusIndicatorFailures": [],
+    "probe": {
+      "name": "dropdownKeyboard",
+      "pass": false,
+      "detail": "toggle [data-track=dd-toggle] is not focusable"
+    }
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0
+}

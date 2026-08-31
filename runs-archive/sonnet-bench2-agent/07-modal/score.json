@@ -1,0 +1,43 @@
+{
+  "caseId": "07-modal",
+  "name": "Modal without focus management",
+  "gates": {
+    "axe": true,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": true,
+  "axeBefore": 0,
+  "axeAfter": 0,
+  "incompleteAfter": 0,
+  "axeRules": [],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:help-link",
+      "track:open-modal"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": [],
+    "probe": {
+      "name": "modalTrap",
+      "pass": true,
+      "detail": "trap, escape and focus return all work"
+    }
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0,
+  "costUsd": 0.1488,
+  "turns": 10,
+  "wallMs": 82146,
+  "cacheReadTokens": 104081,
+  "permissionDenials": 1
+}

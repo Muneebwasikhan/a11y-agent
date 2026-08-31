@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relay Pricing</title>
+<style>
+  * { box-sizing: border-box }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #ffffff; color: #24292f }
+  header { padding: 20px 32px; border-bottom: 1px solid #e8eaee; font-weight: 700 }
+  main { max-width: 720px; margin: 40px auto; padding: 0 24px }
+  h1 { font-size: 28px; margin: 0 0 6px }
+  p.sub { color: #555555; margin: 0 0 32px; font-size: 15px; line-height: 1.6 }
+  .card { border: 1px solid #e8eaee; border-radius: 12px; padding: 28px; max-width: 380px }
+  .plan { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #666666 }
+  .price { font-size: 34px; font-weight: 700; margin: 10px 0 }
+  .price small { font-size: 14px; font-weight: 400; color: #666666 }
+  ul { padding-left: 18px; margin: 0 0 24px; color: #555555; font-size: 14px; line-height: 1.9 }
+  a.more { color: #0969da; font-size: 14px; text-decoration: underline }
+  button { width: 100%; padding: 12px; background: #4563C8; color: #ffffff; border: 0; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; margin-bottom: 14px }
+  .note { font-size: 12px; color: #555555; margin-top: 20px }
+</style>
+<script>
+  window.__activated = []
+  document.addEventListener('click', function (e) {
+    var hit = e.target instanceof Element ? e.target.closest('[data-track]') : null
+    var name = hit ? hit.getAttribute('data-track') : null
+    if (name) window.__activated.push(name)
+  })
+</script>
+</head>
+<body>
+<header>Relay</header>
+<main>
+  <h1>Simple pricing</h1>
+  <p class="sub">One plan, every feature, cancel whenever you like. No usage tiers and no per-seat surprises at the end of the month.</p>
+  <div class="card">
+    <div class="plan">Team</div>
+    <div class="price">$24 <small>per member, per month</small></div>
+    <ul>
+      <li>Unlimited shared inboxes</li>
+      <li>Automations and scheduled sends</li>
+      <li>Priority support within one business day</li>
+    </ul>
+    <button type="button" data-track="cta">Start free trial</button>
+    <a class="more" href="#details" data-track="learn-more">See what is included</a>
+  </div>
+  <p class="note" id="details">Prices exclude VAT. Annual billing saves two months.</p>
+</main>
+</body>
+</html>

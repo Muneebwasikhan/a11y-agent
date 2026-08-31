@@ -1,0 +1,8 @@
+{
+  "name": "Missing form labels",
+  "seeded": ["label", "select-name"],
+  "interactive": [
+    { "track": "submit", "keys": ["enter", "space"] }
+  ],
+  "notes": "Signup form where field names are plain text divs sitting next to bare inputs, so nothing is programmatically associated. Correct fixes turn them into real label elements wired with for and id, without changing the visual design."
+}

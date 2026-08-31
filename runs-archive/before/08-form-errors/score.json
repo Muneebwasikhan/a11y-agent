@@ -1,0 +1,47 @@
+{
+  "caseId": "08-form-errors",
+  "name": "Errors announced only visually",
+  "gates": {
+    "axe": false,
+    "keyboard": true,
+    "layout": true
+  },
+  "pass": false,
+  "axeBefore": 3,
+  "axeAfter": 3,
+  "incompleteAfter": 0,
+  "axeRules": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 3,
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "targets": [
+        ".summary",
+        ".field:nth-child(2) > .error",
+        ".field:nth-child(3) > .error"
+      ]
+    }
+  ],
+  "keyboard": {
+    "pass": true,
+    "tabOrder": [
+      "track:card-name",
+      "track:card-number",
+      "track:card-expiry",
+      "track:pay-now"
+    ],
+    "unreachable": [],
+    "orderPass": true,
+    "activationFailures": [],
+    "focusIndicatorFailures": []
+  },
+  "layout": {
+    "pass": true,
+    "missing": [],
+    "shrunken": [],
+    "overflowX": false,
+    "heightRatio": 1
+  },
+  "pixelDiffRatio": 0
+}
