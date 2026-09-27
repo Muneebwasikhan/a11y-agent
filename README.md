@@ -53,3 +53,7 @@ The full experiment log, with one row per iteration and evidence pointers into t
 Observed across the three-by-two sweep ladder on claude-haiku-4-5 (full log in the changelog): the one-shot baseline never produces working focus management, keyboard dropdown behavior or sufficient contrast, five cases scored zero for three sweeps, because plausible-looking markup fails real key presses. That gap between plausible and verified is the main failure mode of unverified generation. Even the tool-equipped agent's only genuine miss was the modal's focus return, the subtlest behavior in the whole set.
 
 Hot take: an agent optimizes whatever its verifier checks, and so does a benchmark. Our first task contract contained the rubric and every arm saturated at 12/12, measuring spec-following instead of capability, so we cut the contract down to a realistic ticket and the floor dropped out. And pass at first attempt measures luck, worst-of-N against behavioral gates measures deployable quality. Put the engineering effort into the verifier, it is the only part of the system the model cannot fake.
+
+## Contributing
+
+Open a pull request against main. Every pull request runs `npm run typecheck` in GitHub Actions and needs one approving review before it can merge.
